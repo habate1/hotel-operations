@@ -7,13 +7,16 @@ public class Reservation {
     private boolean weekend;
     private double reservationTotal;
 
-    public Reservation(String roomType, boolean weekend, int numberOfNights) {
+    public Reservation(String roomType, int numberOfNights, boolean weekend) {
         this.roomType = roomType;
         this.weekend = weekend;
         this.numberOfNights = numberOfNights;
+    }
+    public double getReservationTotal(String roomType, boolean weekend, int numberOfNights) {
 
         //reservationTotal = price * numberOfNights;
-        this.reservationTotal = this.price * numberOfNights;
+        this.reservationTotal = getPrice() * numberOfNights;
+        return reservationTotal;
     }
 
     public String getRoomType() {
