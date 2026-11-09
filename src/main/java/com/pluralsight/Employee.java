@@ -8,7 +8,21 @@ public class Employee {
     private int hoursWorked;
 
     public int getOvertimeHours() {
-        return hoursWorked - 40;
+        if (hoursWorked > 40) {
+            return  hoursWorked - 40;
+        }
+        return 0;
+    }
+
+    public int getRegularHours() {
+        if (hoursWorked < 40) {
+            return hoursWorked;
+        }
+        return 40;
+    }
+
+    public double getTotalPay() {
+        return getRegularHours() * payRate + (getOvertimeHours() * (1.5 * payRate));
     }
 
     public int getEmployeeId() {
