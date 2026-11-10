@@ -29,14 +29,10 @@ public class Room {
 
     public void checkOut() {
         occupied = false;
-
     }
 
-    public boolean cleanRoom() {
-        if (!dirty) {
-            return true;
-        }
-        return dirty;
+    public void cleanRoom() {
+        dirty = false;
     }
 
     public int getNumberOfBeds() {
