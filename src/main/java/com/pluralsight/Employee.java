@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.time.LocalDateTime;
+
 public class Employee {
     private int employeeId;
     private String name;
@@ -7,8 +9,20 @@ public class Employee {
     private double payRate;
     private int hoursWorked;
     private int start;
+    LocalDateTime timeNow;
+    LocalDateTime startTime;
+
+    public void punchIn() {
+        this.timeNow = LocalDateTime.now();
+
+    }
+
+    public void punchOut() {
+        timeNow = LocalDateTime.now();
+    }
 
     public void punchIn(int time) {
+        startTime = timeNow;
         start = time;
     }
     public void punchOut(int time) {
