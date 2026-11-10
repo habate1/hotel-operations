@@ -19,6 +19,26 @@ public class Room {
         return !dirty && !occupied;
     }
 
+    public void checkIn() {
+        if (isAvailable()) {
+            occupied = true;
+            dirty = true;
+        }
+
+    }
+
+    public void checkOut() {
+        occupied = false;
+
+    }
+
+    public boolean cleanRoom() {
+        if (!dirty) {
+            return true;
+        }
+        return dirty;
+    }
+
     public int getNumberOfBeds() {
         return numberOfBeds;
     }

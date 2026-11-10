@@ -6,6 +6,16 @@ public class Employee {
     private String department;
     private double payRate;
     private int hoursWorked;
+    private int start;
+
+
+    public void punchIn(int time) {
+        start = time;
+    }
+    public void punchOut(int time) {
+        int end = time;
+        hoursWorked = hoursWorked + (end - start);
+    }
 
     public int getOvertimeHours() {
         if (hoursWorked > 40) {

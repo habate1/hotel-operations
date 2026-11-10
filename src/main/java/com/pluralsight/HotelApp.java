@@ -9,7 +9,7 @@ public class HotelApp {
         if (dirtyRoom.isAvailable()) {
             System.out.println("the room is available");
         } else {
-            System.out.println("the room is not availabl");
+            System.out.println("the room is not available");
         }
 
     }
