@@ -13,14 +13,19 @@ public class Employee {
     LocalDateTime startTime;
 
     public void punchIn() {
-        this.timeNow = LocalDateTime.now();
+        int currentHour = LocalDateTime.now().getHour();
+        this.punchIn(currentHour);
+        //this.timeNow = LocalDateTime.now();
 
     }
 
     public void punchOut() {
-        timeNow = LocalDateTime.now();
+        int currentHour = LocalDateTime.now().getHour();
+        this.punchOut(currentHour);
+        //timeNow = LocalDateTime.now();
     }
 
+    // test these 2 methods
     public void punchIn(int time) {
         startTime = timeNow;
         start = time;
@@ -58,4 +63,6 @@ public class Employee {
         }
         return 0;
     }
+
+
 }

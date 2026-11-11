@@ -4,7 +4,7 @@ public class HotelApp {
     public static void main(String[] args) {
 
         // create simple hotel object
-        Hotel hotel = new Hotel("name", 100, 100);
+        //Hotel hotel = new Hotel("name", 100, 100);
 
         // test
         Room dirtyRoom = new Room(100, 500, false, true);
